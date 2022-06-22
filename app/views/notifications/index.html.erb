@@ -1,0 +1,28 @@
+<h1>Notifications#index</h1>
+
+<table>
+<thead>
+<tr>
+<th>Message</th>
+<th>Notification Id</th>
+<th>Notification Type</th>
+
+</tr>
+</thead>
+<tbody>
+<% @notifications.each do |n| %>
+<tr>
+    <td><%= n.message %></td>
+    <td><%= n.notifiable_id %></td>
+
+    <td><%= n.notifiable_type %></td>
+    
+</tr>
+<%end%>
+
+</tbody>
+</table>
+</body>
+</html>
+
+
