@@ -1,0 +1,23 @@
+<h1>Cities#index</h1>
+
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+
+
+</tr>
+</thead>
+<tbody>
+<% @cities.each do |c| %>
+<tr>
+    <td><%= c.name %></td>
+    
+</tr>
+<%end%>
+</tbody>
+</table>
+<div>
+<%= link_to "New City", new_city_path %>
+</div>
