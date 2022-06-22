@@ -1,0 +1,38 @@
+
+<h1>Users</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Phone Number</th>
+<th>Email</th>
+<th>Event Name</th>
+<th>Start Time</th>
+<th>End Time</th>
+<th>Location</th>
+
+</tr>
+</thead>
+<tbody>
+
+<tr>
+    <td><%= @booking.user.name %></td>
+    <td><%= @booking.user.phone %></td>
+    <td><%= @booking.user.email %></td>
+    <td><%= @booking.event.name %></td>
+    <td><%= @booking.event.start_time %></td>
+    <td><%= @booking.event.end_time %></td>
+    <td><%= @booking.event.location.name %></td>
+    <td>
+    <%= link_to 'Confirm', user_booking_confirm_path(user_id: @booking.user.id, booking_id: @booking.id), data: { "turbo-method": :put } %>
+    </br>
+    <%= link_to 'Cancel', user_booking_cancel_path(user_id: @booking.user.id, booking_id: @booking.id), data: { "turbo-method": :put } %>
+    
+    </td>
+</tr>
+
+</tbody>
+</table>
+
+</body>
+</html>
